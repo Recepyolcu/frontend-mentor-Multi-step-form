@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 
 const sm = 640;
 
+function handleResize() {
+    if (window.innerWidth > sm) setIsResized(true);
+    else setIsResized(false);
+}
+
 export default function Sidebar(props) {
     const [ isResized, setIsResized ] = useState(false);
     const classes = {
@@ -10,11 +15,7 @@ export default function Sidebar(props) {
     }
 
     useEffect(() => {
-        function handleResize() {
-            if (window.innerWidth > sm) setIsResized(true);
-            else setIsResized(false);
-        }
-        addEventListener('resize', handleResize)
+        addEventListener('resize', handleResize);
     });
         
 
