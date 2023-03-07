@@ -9,7 +9,7 @@ export default function Sidebar(props) {
         deactive: "border-light_blue border-2 flex items-center justify-center w-8 h-8 max-sm:w-10 max-sm:h-10 rounded-full"
     }
 
-    addEventListener('resize', () => {
+    window.addEventListener('resize', () => {
         if (window.innerWidth > sm) setIsResized(true);
         else setIsResized(false);
     });
