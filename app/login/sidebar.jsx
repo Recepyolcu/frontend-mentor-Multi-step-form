@@ -8,13 +8,10 @@ export default function Sidebar(props) {
         active:   "bg-light_blue text-black flex items-center justify-center w-8 h-8 max-sm:w-10 max-sm:h-10 rounded-full",
         deactive: "border-light_blue border-2 flex items-center justify-center w-8 h-8 max-sm:w-10 max-sm:h-10 rounded-full"
     }
-    
-    useEffect(() =>{
-        function handleResize() {
-            if (window.innerWidth > sm) setIsResized(true);
-            else setIsResized(false);
-        }
-        window.addEventListener('resize', handleResize);
+
+    addEventListener('resize', () => {
+        if (window.innerWidth > sm) setIsResized(true);
+        else setIsResized(false);
     });
 
     return (
