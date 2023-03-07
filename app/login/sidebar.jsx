@@ -9,10 +9,14 @@ export default function Sidebar(props) {
         deactive: "border-light_blue border-2 flex items-center justify-center w-8 h-8 max-sm:w-10 max-sm:h-10 rounded-full"
     }
 
-    addEventListener('resize', () => {
-        if (window.innerWidth > sm) setIsResized(true);
-        else setIsResized(false);
+    useEffect(() => {
+        function handleResize() {
+            if (window.innerWidth > sm) setIsResized(true);
+            else setIsResized(false);
+        }
+        addEventListener('resize', handleResize)
     });
+        
 
     return (
         <div className="max-sm:w-full max-sm:flex-row max-sm:justify-center max-sm:rounded-none max-sm:h-64 max-sm:bg-bottom max-sm:gap-4 bg-purplish_blue bg-sideBackground bg-cover bg-bottom w-[355px] h-full p-7 rounded-lg text-white flex flex-col gap-8 items-start">
