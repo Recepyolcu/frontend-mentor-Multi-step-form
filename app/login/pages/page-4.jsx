@@ -6,7 +6,7 @@ export default function Page4({selectedPlan, yearOrMonth, addOns, total, subData
     let plan = selectedPlan;
     plan = plan.charAt(0).toUpperCase() + plan.slice(1);
     return (
-        <div className="max-sm:p-10 max-sm:drop-shadow-xl max-sm:bg-white max-sm:text-xl max-sm:relative max-sm:bottom-40 max-sm:w-11/12 max-sm:rounded-xl flex flex-col gap-8">
+        <div className="max-sm:p-10 max-sm:drop-shadow-xl max-sm:bg-white max-sm:text-xl max-sm:relative max-sm:bottom-40 max-sm:w-11/12 max-sm:rounded-xl flex flex-col gap-8 w-full">
             <div className="flex flex-col gap-5">
                 <h1 className="text-marine_blue text-4xl font-bold">Finishing up</h1>
                 <p className="text-cool_gray">Double-check everything looks OK before confirming.</p>
